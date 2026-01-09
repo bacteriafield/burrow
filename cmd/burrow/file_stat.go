@@ -30,7 +30,7 @@ import (
 	"fmt"
 	"os"
 
-	create "github.com/elaurentium/burrow/internal/fs"
+	create "github.com/elaurentium/burrow/lib/fs"
 	"github.com/spf13/cobra"
 )
 

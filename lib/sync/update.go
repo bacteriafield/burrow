@@ -39,7 +39,7 @@ import (
 	"strings"
 
 	"github.com/elaurentium/burrow/cmd/prompt"
-	"github.com/elaurentium/burrow/internal/helper"
+	"github.com/elaurentium/burrow/lib/helper"
 	"github.com/elaurentium/burrow/pkg"
 )
 

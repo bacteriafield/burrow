@@ -30,7 +30,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/elaurentium/burrow/cmd/command"
+	command "github.com/elaurentium/burrow/cmd/cli"
 	"github.com/elaurentium/burrow/pkg"
 	"github.com/elaurentium/burrow/pkg/formatter"
 	"github.com/spf13/cobra"

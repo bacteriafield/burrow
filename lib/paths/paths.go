@@ -30,7 +30,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/elaurentium/burrow/internal/helper"
+	"github.com/elaurentium/burrow/lib/helper"
 )
 
 func IsFile(path string) bool {

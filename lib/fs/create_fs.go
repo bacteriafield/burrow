@@ -24,29 +24,54 @@
 
 */
 
-package internal
+package fs
 
 import (
 	"fmt"
+	"os"
+	"path/filepath"
+	"sync"
 
-	"github.com/elaurentium/burrow/internal/shell"
+	pt "github.com/elaurentium/burrow/lib/paths"
 )
 
-func Init(cmd string, opts *shell.Opts) (string, error) {
-	switch cmd {
-	case "bash":
-		bash, err := shell.NewBash(opts)
-		if err != nil {
-			return "", err
-		}
-		return bash.Render()
-	case "zsh":
-		zsh, err := shell.NewZsh(opts)
-		if err != nil {
-			return "", err
-		}
-		return zsh.Render()
-	default:
-		return "", fmt.Errorf("unsupported shell: %s", cmd)
+type Creator struct {
+	Perm    os.FileMode
+	Workers int
+	Wg      *sync.WaitGroup
+}
+
+func NewCreator() *Creator {
+	return &Creator{
+		Perm:    0755,
+		Workers: 0,
+		Wg:      &sync.WaitGroup{},
 	}
+}
+
+func (c *Creator) Create(paths []string) error {
+	for _, path := range paths {
+		if pt.IsFile(path) {
+			parent := filepath.Dir(path)
+			if parent != "." && parent != "" {
+				if err := os.MkdirAll(parent, c.Perm); err != nil {
+					fmt.Fprintf(os.Stderr, "error creating directory %s: %v\n", parent, err)
+					continue
+				}
+			}
+
+			f, err := os.OpenFile(path, os.O_CREATE|os.O_EXCL, c.Perm)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "%v\n", err)
+				continue
+			}
+			_ = f.Close()
+		} else {
+			if err := os.MkdirAll(path, c.Perm); err != nil {
+				fmt.Fprintf(os.Stderr, "error creating directory %s: %v\n", path, err)
+				continue
+			}
+		}
+	}
+	return nil
 }
