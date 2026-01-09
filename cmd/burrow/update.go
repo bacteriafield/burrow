@@ -29,7 +29,7 @@ package burrow
 import (
 	"fmt"
 
-	"github.com/elaurentium/burrow/internal/sync"
+	"github.com/elaurentium/burrow/lib/sync"
 	"github.com/spf13/cobra"
 )
 

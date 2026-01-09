@@ -27,10 +27,10 @@
 package burrow
 
 import (
-	"github.com/elaurentium/burrow/cmd/command"
-	create "github.com/elaurentium/burrow/internal/fs"
+	command "github.com/elaurentium/burrow/cmd/cli"
+	create "github.com/elaurentium/burrow/lib/fs"
 
-	"github.com/elaurentium/burrow/internal/helper"
+	"github.com/elaurentium/burrow/lib/helper"
 	"github.com/spf13/cobra"
 )
 

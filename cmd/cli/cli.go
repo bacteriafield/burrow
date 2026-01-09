@@ -31,7 +31,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/elaurentium/burrow/cmd/command/streams"
+	"github.com/elaurentium/burrow/cmd/cli/streams"
 	"github.com/moby/moby/client"
 )
 
