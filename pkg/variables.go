@@ -27,4 +27,4 @@
 package pkg
 
 // Version of the cli injection in compilation time
-var Version = "1.0.3"
+var Version = "1.0.4"
