@@ -6,10 +6,10 @@
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/github/license/elaurentium/pitchshifter?color=yellow)](https://github.com/elaurentium/burrow/blob/main/LICENSE)
-[![Version](https://img.shields.io/github/v/release/elaurentium/burrow?color=blue)](https://github.com/elaurentium/burrow/releases)
-[![Platform](https://img.shields.io/badge/platforms-%20Linux%20|%20Windows%20|%20macOS-green.svg?color=lightgrey)](https://github.com/elaurentium/pitchshifter/releases)
-![GitHub stars](https://img.shields.io/github/stars/elaurentium/burrow)
+[![License: MIT](https://img.shields.io/github/license/bacteriafield/burrow?color=yellow)](https://github.com/bacteriafield/burrow/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/bacteriafield/burrow?color=blue)](https://github.com/bacteriafield/burrow/releases)
+[![Platform](https://img.shields.io/badge/platforms-%20Linux%20|%20Windows%20|%20macOS-green.svg?color=lightgrey)](https://github.com/bacteriafield/burrow/releases)
+![GitHub stars](https://img.shields.io/github/stars/bacteriafield/burrow)
 
 </div>
 
@@ -31,7 +31,7 @@ b src/main.go
 
 # Installation
 ```bash
-curl -fsSL https://raw.githubusercontent.com/elaurentium/burrow/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bacteriafield/burrow/main/install.sh | bash
 ```
 
 # Update
@@ -47,4 +47,4 @@ Pull request are ever welcome. For major changes, please open an issue to discus
 - Check the [contributing guidelines](/docs/HOW-TO-CONTRIBUTE.md).
 
 ## License
-This software is licensed under the [MIT](LICENSE) © [Evandro L. Limeira](https://github.com/elaurentium)
+This software is licensed under the [MIT](LICENSE) © [Evandro L. Limeira](https://github.com/bacteriafield)

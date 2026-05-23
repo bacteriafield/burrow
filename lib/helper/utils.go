@@ -35,7 +35,7 @@ import (
 const (
 	Name      = "Burrow"
 	Usage     = "Burrow"
-	Owner     = "elaurentium"
+	Owner     = "bacteriafield"
 	GithubApi = "https://api.github.com/repos/" + Owner + "/" + Name
 
 	// Build tools
