@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="elaurentium/burrow"
+REPO="bacteriafield/burrow"
 BINARY_NAME="b"
 TMP_DIR="$(mktemp -d)"
 INSTALL_DIR="/usr/local/bin"
